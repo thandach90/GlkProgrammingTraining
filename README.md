@@ -1,0 +1,2 @@
+# GlkProgrammingTraining
+Basic C# Introduction
