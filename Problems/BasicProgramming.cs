@@ -28,18 +28,7 @@ namespace Problems
         /// <returns></returns>
         public static bool IsHooky(bool weekDay, bool golf)
         {
-            if (!weekDay)
-            {
-                return true;
-            }
-            else if (weekDay && golf)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return false;
         }
     }
 }
