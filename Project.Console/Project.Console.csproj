@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A782448-6D26-4BB2-A675-3435BA8B69F9}</ProjectGuid>
+    <ProjectGuid>{D851D8A9-B4A6-4562-AD5F-C56048B582D7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Problems.Console</RootNamespace>
-    <AssemblyName>Problems.Console</AssemblyName>
+    <RootNamespace>Project.Console</RootNamespace>
+    <AssemblyName>Project.Console</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,12 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Problems\Problems.csproj">
-      <Project>{1ac9b116-45aa-42db-94d3-757cf8da2650}</Project>
-      <Name>Problems</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
