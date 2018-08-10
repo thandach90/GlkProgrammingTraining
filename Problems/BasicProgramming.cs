@@ -123,7 +123,7 @@ namespace Problems
 
         public static bool TenYearOldCat(int catA, int catB)
         {
-            return false;//placeholder
+            return false;//place
         }
 
         /// <summary>
