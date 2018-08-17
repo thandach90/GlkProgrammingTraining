@@ -9,6 +9,7 @@ namespace Problems
 {
     public static class BasicProgramming
     {
+        private static readonly int sum;
 
         /// <summary>
         /// We have two cats, a and b, and the parameters aYawn and bYawn indicate if each is yawning, so if aYawn is true then cat a is yawning. We are in trouble if they are both yawning or if neither of them is yawning. Return true if we are in trouble.
@@ -80,8 +81,10 @@ namespace Problems
 
 
 
-    /// <summary>
-        /// Given two bowls of food represented by variables, food and food2, return true if one bowl has less than 0 food (-1,-2) and the other bowl has more than 100
+        /// <summary>
+        /// Given two bowls of food represented by variables, food and food2, 
+        /// return true if one bowl has less than 0 food (-1,-2) and the other 
+        /// bowl has more than 100
         /// </summary>
         /// <param name="food"></param>
         /// <param name="food2"></param>
@@ -93,7 +96,7 @@ namespace Problems
             {
                 return true;
             }
-                return false;
+            return false;
         }
 
 
@@ -115,7 +118,8 @@ namespace Problems
 
 
         /// <summary>
-        /// We have two cats whose parameters represent their age, catA and catB, return true if one is 10 years old or if combined they equal 10 years of age 
+        /// We have two cats whose parameters represent their age, catA and catB, 
+        /// return true if one is 10 years old or if combined they equal 10 years of age 
         /// </summary>
         /// <param name="catA"></param>
         /// <param name="catB"></param>
@@ -123,44 +127,83 @@ namespace Problems
 
         public static bool TenYearOldCat(int catA, int catB)
         {
-            return false;//place
+            if ((catA == 10) || (catB == 10))
+            {
+                return true;
+            }
+
+            if (catA + catB == 10)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
-        /// The parameter represents how many feet it will take our cat to reach his litter box. If the cat is within 10 of 100 feet or within 10 of 200 feet then the cat is close. So if 93 is passed in as feet then we return true, also if 193 is passed then we return true
+        /// The parameter represents how many feet it will take our cat to reach his litter box. 
+        /// If the cat is within 10 of 100 feet or within 10 of 200 feet then the cat is close. 
+        /// So if 93 is passed in as feet then we return true, also if 193 is passed then we return true
         /// </summary>
         /// <param name="feet"></param>
         /// <returns></returns>
         public static bool IsCatClose(int feet)
         {
-            return false;//placeholder
+            if((feet >= 90) && (feet <= 110) || (feet >= 190) && (feet <= 210))
+            {
+                return true;
+            }
+
+            return false;
         }
+          
 
         /// <summary>
-        /// Given two int values, return their sum. Unless the two values are the same, then return double their sum.
+        /// Given two int values, return their sum. Unless the two values are the same, 
+        /// then return double their sum.
         /// </summary>
-        /// <param name="first"></param>
         /// <param name="second"></param>
+        /// <param name="first"></param>
         /// <returns></returns>
-        public static int DoubleSum(int first, int second)
+        public static int DoubleSum(int second, int first)
         {
-            return 0;//placeholder
+            
+           if(first == second)
+            {
+                int sum = (first +second)*2;
+                return sum;
+            }
+
+           else
+            {
+                int sum = first + second;
+                return sum;
+            }
+            
         }
 
         /// <summary>
-        /// There is an input provided, calculate the absolute-difference between input and 21 and return the output. If input is over 21  return double the result of the absolute-difference.
+        /// There is an input provided, calculate the absolute-difference between 
+        /// input and 21 and return the output. If input is over 21  return double 
+        /// the result of the absolute-difference.
         /// Hint- Take a look at the Math.Abs() .net method
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
         public static int DifferenceOf21(int input)
         {
-            return 0;//placeholder
+            if(input >= -21)
+            {
+                return (input - 21) * 2;
+            }
+
+            return input - 21;
+          
         }
 
 
         /// <summary>
-        /// We have two int parameters, a and b , if one is negative and one is positive return back true. If the parameter negative is true, then only return true if both are negative
+        /// We have two int parameters, a and b , if one is negative and one is positive return back true. 
+        /// If the parameter negative is true, then only return true if both a and b are negative
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
@@ -169,7 +212,24 @@ namespace Problems
 
         public static bool PositiveNegative(int a, int b, bool negative)
         {
-            return true;
+
+            if (negative == true )
+            {
+                if ((a < 0) && (b < 0))
+                {
+                    return true;
+                }
+                return false;
+            }
+
+            if ((a < 0) && (b > 0) || (a > 0) && (b < 0))
+            {
+                return true;
+            }
+
+           
+
+            return false;  
         }
     }
 }

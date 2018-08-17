@@ -100,7 +100,7 @@ namespace Problems.Test
             int second = 2;
 
             //act
-            int sum = BasicProgramming.DoubleSum(first, second);
+            int sum = BasicProgramming.DoubleSum(second, first);
 
             //assert
             Assert.AreEqual(3, sum);
@@ -113,7 +113,7 @@ namespace Problems.Test
             int second = 2;
 
             //act
-            int sum = BasicProgramming.DoubleSum(first, second);
+            int sum = BasicProgramming.DoubleSum(second, first);
 
             //assert
             Assert.AreEqual(5, sum);
@@ -126,7 +126,7 @@ namespace Problems.Test
             int second = 2;
 
             //act
-            int sum = BasicProgramming.DoubleSum(first, second);
+            int sum = BasicProgramming.DoubleSum(second, first);
 
             //assert
             Assert.AreEqual(8, sum);
@@ -139,7 +139,7 @@ namespace Problems.Test
             int second = 0;
 
             //act
-            int sum = BasicProgramming.DoubleSum(first, second);
+            int sum = BasicProgramming.DoubleSum(second, first);
 
             //assert
             Assert.AreEqual(-1, sum);
@@ -152,7 +152,7 @@ namespace Problems.Test
             int second = 3;
 
             //act
-            int sum = BasicProgramming.DoubleSum(first, second);
+            int sum = BasicProgramming.DoubleSum(second, first);
 
             //assert
             Assert.AreEqual(12, sum);
@@ -165,7 +165,7 @@ namespace Problems.Test
             int second = 0;
 
             //act
-            int sum = BasicProgramming.DoubleSum(first, second);
+            int sum = BasicProgramming.DoubleSum(second, first);
 
             //assert
             Assert.AreEqual(0, sum);
@@ -178,7 +178,7 @@ namespace Problems.Test
             int second = 1;
 
             //act
-            int sum = BasicProgramming.DoubleSum(first, second);
+            int sum = BasicProgramming.DoubleSum(second, first);
 
             //assert
             Assert.AreEqual(1, sum);
@@ -191,7 +191,7 @@ namespace Problems.Test
             int second = 4;
 
             //act
-            int sum = BasicProgramming.DoubleSum(first, second);
+            int sum = BasicProgramming.DoubleSum(second, first);
 
             //assert
             Assert.AreEqual(7, sum);
