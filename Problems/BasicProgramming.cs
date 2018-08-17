@@ -155,7 +155,14 @@ namespace Problems
         /// <returns></returns>
         public static int DifferenceOf21(int input)
         {
-            return 0;//placeholder
+            int abs = Math.Abs(input - 21);
+            
+            if (input > 21)
+            {
+               return abs * 2;
+            }
+
+            return abs;
         }
 
 
@@ -169,7 +176,7 @@ namespace Problems
 
         public static bool PositiveNegative(int a, int b, bool negative)
         {
-            return true;
+            return false;
         }
     }
 }
