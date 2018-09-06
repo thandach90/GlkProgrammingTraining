@@ -15,9 +15,17 @@ namespace Problems.Console
        
         static void Main(string[] args)
         {
-
-           
-
+            string name = "catapulted";
+            string first = name.Substring(0, 1);
+            string last = name.Substring(name.Length -1, 1);
+            string ochar = name.Substring(name.Length -2, 1);
+            string inbetween = name.Substring(1,name.Length -2);
+            string fourchar = name.Substring(name.Length );
+            System.Console.WriteLine(first);
+            System.Console.WriteLine(last);
+            System.Console.WriteLine(ochar);
+            System.Console.WriteLine(inbetween);
+            System.Console.WriteLine(fourchar);
 
         }
 
