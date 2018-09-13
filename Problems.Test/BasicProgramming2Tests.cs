@@ -1543,5 +1543,975 @@ namespace Problems.Test
         }
     }
 
+    [TestClass]
+    public class CatMix
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            string value = "cat snacks";
+
+
+            //act
+
+            bool result = BasicProgramming2.CatMix(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            string value = "hat snacks";
+
+
+            //act
+
+            bool result = BasicProgramming2.CatMix(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            string value = "haz snacks";
+
+
+            //act
+
+            bool result = BasicProgramming2.CatMix(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            string value = "hat";
+
+
+            //act
+
+            bool result = BasicProgramming2.CatMix(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            string value = "ca";
+
+
+            //act
+
+            bool result = BasicProgramming2.CatMix(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+        [TestMethod]
+        public void Test6()
+        {
+            //arrange
+            string value = "c";
+
+
+            //act
+
+            bool result = BasicProgramming2.CatMix(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+        [TestMethod]
+        public void Test7()
+        {
+            //arrange
+            string value = "";
+
+
+            //act
+
+            bool result = BasicProgramming2.CatMix(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+    }
+
+    [TestClass]
+    public class LargestCat
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            int catA = 1;
+            int catB = 2;
+            int catC = 3;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA,catB,catC);
+
+            //assert
+
+            Assert.AreEqual(3, max);
+        }
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            int catA = 1;
+            int catB = 3;
+            int catC = 2;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(3, max);
+        }
+
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            int catA = 3;
+            int catB = 2;
+            int catC = 1;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(3, max);
+        }
+
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            int catA = 9;
+            int catB = 3;
+            int catC = 3;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(9, max);
+        }
+
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            int catA = 3;
+            int catB = 9;
+            int catC = 3;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(9, max);
+        }
+
+        [TestMethod]
+        public void Test6()
+        {
+            //arrange
+            int catA = 3;
+            int catB = 3;
+            int catC = 9;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(9, max);
+        }
+
+        [TestMethod]
+        public void Test7()
+        {
+            //arrange
+            int catA = 8;
+            int catB = 2;
+            int catC = 3;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(8, max);
+        }
+
+        [TestMethod]
+        public void Test8()
+        {
+            //arrange
+            int catA = -3;
+            int catB = -1;
+            int catC = -2;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(-1, max);
+        }
+
+        [TestMethod]
+        public void Test9()
+        {
+            //arrange
+            int catA = 6;
+            int catB = 2;
+            int catC = 5;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(6, max);
+        }
+
+        [TestMethod]
+        public void Test10()
+        {
+            //arrange
+            int catA = 5;
+            int catB = 6;
+            int catC = 2;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(6, max);
+        }
+
+        [TestMethod]
+        public void Test11()
+        {
+            //arrange
+            int catA = 5;
+            int catB = 2;
+            int catC = 6;
+
+
+            //act
+
+            int max = BasicProgramming2.LargestCat(catA, catB, catC);
+
+            //assert
+
+            Assert.AreEqual(6, max);
+        }
+    }
+
+    [TestClass]
+
+    public class GetClosetCatToTen
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            int catA = 8;
+            int catB = 13;
+           
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(8, max);
+        }
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            int catA = 13;
+            int catB = 8;
+
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(8, max);
+        }
+
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            int catA = 13;
+            int catB = 7;
+
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(0, max);
+        }
+
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            int catA = 7;
+            int catB = 13;
+
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(0, max);
+        }
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            int catA = 9;
+            int catB = 13;
+
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(9, max);
+        }
+
+        [TestMethod]
+        public void Test6()
+        {
+            //arrange
+            int catA = 10;
+            int catB = 12;
+
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(10, max);
+        }
+
+        [TestMethod]
+        public void Test7()
+        {
+            //arrange
+            int catA = 11;
+            int catB = 10;
+
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(10, max);
+        }
+
+        [TestMethod]
+        public void Test8()
+        {
+            //arrange
+            int catA = 5;
+            int catB = 21;
+
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(5, max);
+        }
+
+        [TestMethod]
+        public void Test9()
+        {
+            //arrange
+            int catA = 0;
+            int catB = 20;
+
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(0, max);
+        }
+
+        [TestMethod]
+        public void Test10()
+        {
+            //arrange
+            int catA = 10;
+            int catB = 10;
+
+
+
+            //act
+
+            int max = BasicProgramming2.GetClosetCatToTen(catA, catB);
+
+            //assert
+
+            Assert.AreEqual(0, max);
+        }
+    }
+
+    [TestClass]
+    public class GetStringE
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            string value = "Hello";
+
+
+
+            //act
+
+            bool result = BasicProgramming2.GetStringE(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            string value = "Heelle";
+
+
+
+            //act
+
+            bool result = BasicProgramming2.GetStringE(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            string value = "Heelele";
+
+
+
+            //act
+
+            bool result = BasicProgramming2.GetStringE(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            string value = "Hll";
+
+
+
+            //act
+
+            bool result = BasicProgramming2.GetStringE(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            string value = "e";
+
+
+
+            //act
+
+            bool result = BasicProgramming2.GetStringE(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test6()
+        {
+            //arrange
+            string value = "";
+
+
+
+            //act
+
+            bool result = BasicProgramming2.GetStringE(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+    }
+
+    [TestClass]
+    public class ThreeOr5
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            int value = 3;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test2()
+        {
+            int value = 10;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            int value = 8;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test4()
+        {
+            int value = 15;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test5()
+        {
+            int value = 5;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test6()
+        {
+            int value = 9;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test7()
+        {
+            int value = 4;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test8()
+        {
+            int value = 7;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test9()
+        {
+            int value = 6;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test10()
+        {
+            int value = 17;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test11()
+        {
+            int value = 18;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test12()
+        {
+            int value = 29;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test13()
+        {
+            int value = 20;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test14()
+        {
+            int value = 21;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test15()
+        {
+            int value = 22;
+
+
+
+            //act
+
+            bool result = BasicProgramming2.ThreeOrFive(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+    }
+
+
+    [TestClass]
+    public class LastDigit
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            int valueA = 7;
+            int valueB = 17;
+
+
+            //act
+
+            bool result = BasicProgramming2.GetTheLastDigit(valueA,valueB);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            int valueA = 6;
+            int valueB = 17;
+
+
+            //act
+
+            bool result = BasicProgramming2.GetTheLastDigit(valueA, valueB);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            int valueA = 3;
+            int valueB = 113;
+
+
+            //act
+
+            bool result = BasicProgramming2.GetTheLastDigit(valueA, valueB);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            int valueA = 114;
+            int valueB = 113;
+
+
+            //act
+
+            bool result = BasicProgramming2.GetTheLastDigit(valueA, valueB);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            int valueA = 114;
+            int valueB = 4;
+
+
+            //act
+
+            bool result = BasicProgramming2.GetTheLastDigit(valueA, valueB);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test6()
+        {
+            //arrange
+            int valueA = 10;
+            int valueB = 0;
+
+
+            //act
+
+            bool result = BasicProgramming2.GetTheLastDigit(valueA, valueB);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test7()
+        {
+            //arrange
+            int valueA = 11;
+            int valueB = 0;
+
+
+            //act
+
+            bool result = BasicProgramming2.GetTheLastDigit(valueA, valueB);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+    }
+
 
 }

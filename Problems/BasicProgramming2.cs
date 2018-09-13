@@ -173,5 +173,81 @@ namespace Problems
         {
             return string.Empty;
         }
+
+        /// <summary>
+        /// We have a string parameter called mix. Return true if the string begins with 'cat', however the 'c' in 'cat' can be anything so 'bat','hat' are examples which will also return true
+        /// </summary>
+        /// <param name="mix"></param>
+        /// <returns></returns>
+        public static bool CatMix(string mix)
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// We have three cats whose weight is stored in catA,catB,and catC. Return the heaviest cat
+        /// </summary>
+        /// <param name="catA"></param>
+        /// <param name="catB"></param>
+        /// <param name="catC"></param>
+        /// <returns></returns>
+
+        public static int LargestCat(int catA, int catB, int catC)
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// We are given two integer parameters catA and catB which represents a cats weight. Return the weight of the cat closest to 10. If they are tied in how close to ten they are, return zero.
+        /// 
+        /// For example: if catA is 8 and catB is 9, return catb which is 9
+        /// </summary>
+        /// <param name="catA"></param>
+        /// <param name="catB"></param>
+        /// <returns></returns>
+        public static int GetClosetCatToTen(int catA, int catB)
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// We are given a string parameter str, return true if str contains between 1 and 3 'e' characters
+        /// 
+        /// For example - cat returns true , ccccat returns false
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static bool GetStringE(string str)
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// This will be a research question. Please research the modulus operator '%' and figure out its functionality. You will need it to solve the following problem. A important skill in programming is looking up commands and figuring out how to use them
+        /// 
+        /// We are given a integer parameter input, return true if input is a multiple of 3 or 5.
+        /// 
+        /// example: 3 = true, 10 = true, 8 = false
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+
+        public static bool ThreeOrFive(int input)
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// We are given two integer parameters inputA and inputB which will always be positive. Return true if they both have the same last digit.
+        /// 
+        /// For example: inputA = 7 and inputB = 17 will return true
+        /// </summary>
+        /// <param name="inputA"></param>
+        /// <param name="inputB"></param>
+        /// <returns></returns>
+        public static bool GetTheLastDigit(int inputA, int inputB)
+        {
+            return false;
+        }
     }
 }
