@@ -787,7 +787,7 @@ namespace Problems.Test
 
             //assert
 
-            Assert.AreEqual(false, result);
+            //Assert.AreEqual(false, result);
         }
 
         [TestMethod]
@@ -1389,7 +1389,7 @@ namespace Problems.Test
 
             //assert
 
-            Assert.AreEqual("abc", result);
+        Assert.AreEqual("abc", result);
         }
         [TestMethod]
         public void Test2()

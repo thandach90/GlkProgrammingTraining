@@ -11,7 +11,9 @@ namespace Problems
     {
 
         /// <summary>
-        /// We have two cats, a and b, and the parameters aYawn and bYawn indicate if each is yawning, so if aYawn is true then cat a is yawning. We are in trouble if they are both yawning or if neither of them is yawning. Return true if we are in trouble.
+        /// We have two cats, a and b, and the parameters aYawn and bYawn indicate if each is yawning, 
+        /// so if aYawn is true then cat a is yawning. We are in trouble if they are both yawning or if 
+        /// neither of them is yawning. Return true if we are in trouble.
         /// </summary>
         /// <param name="aYawn"></param>
         /// <param name="bYawn"></param>
@@ -38,7 +40,10 @@ namespace Problems
 
 
         /// <summary>
-        /// The parameter weekday is true if its a weekday and false if its on the weekend. The parameter golf is true if we play golf and false if we don't. If its a weekday and we play golf we play hooky, we also play hooky if its not a weekday so return true for these two conditions.
+        /// The parameter weekday is true if its a weekday and false if its on the weekend. 
+        /// The parameter golf is true if we play golf and false if we don't. If its a weekday and we 
+        /// play golf we play hooky, we also play hooky if its not a weekday so return true for these two 
+        /// conditions.
         /// </summary>
         /// <param name="weekDay"></param>
         /// <param name="golf"></param>
@@ -61,8 +66,8 @@ namespace Problems
 
         /// <summary>
         /// Our cat likes to meow. The parameter hour is the time in 
-        /// the range between 0 and 23. 
-        /// We are angry if the cat is meowing and the hour is before 7 or after 20. Return true if we are angry
+        /// the range between 0 and 23. We are angry if the cat is meowing and the hour is before 7 or after 20.
+        /// Return true if we are angry
         /// </summary>
         /// <param name="meowing"></param>
         /// <param name="hour"></param>
