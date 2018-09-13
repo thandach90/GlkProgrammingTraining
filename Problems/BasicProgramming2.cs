@@ -9,7 +9,6 @@ namespace Problems
 {
     public static class BasicProgramming2
     {
-
         /// <summary>
         /// Given a string parameter 'value', return the string with 'cat' added to the front.
         /// </summary>
@@ -17,33 +16,40 @@ namespace Problems
         /// <returns></returns>
         public static string CatString(string value)
         {
-            return string.Empty;
+            return "cat" + value;
         }
 
         /// <summary>
         /// Given a string parameter 'value', return the first character from the string. 
-        /// Hint: take a look at the substring method on the string class or access the string by index
-        /// </summary>
+        /// Hint: take a look at the substring method on the string class 
+        /// or access the string by index
+        /// </summar 
         /// <param name="value"></param>
         /// <returns></returns>
         public static string CatSubString(string value)
         {
-            return string.Empty;
+            return value.Substring(0, 1);
         }
 
-        /// <summary>
-        /// Given the string parameter value, add 'cat' to the front of the string. If the string value parameter already begins with 'cat', return the string unchanged.
+
+        /// <summary> 
+        /// Given the string parameter value, add 'cat' to the front of the string. 
+        /// If the string value parameter already begins with 'cat', return the string unchanged.
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
         public static string DoesStringContainCat(string value)
         {
-            return string.Empty;
+            if (value.Substring(0, 3) == "cat")
+            {
+                return value;
+            }
+
+            return CatString(value);
         }
 
         /// <summary>
         /// Given the string parameter value, remove the character specified by the int parameter index
-        /// 
         /// Example: value "cat", index="1", result = "ct"
         /// Hint: take a look at the string remove method or the replace method for a bigger challenge
         /// </summary>
@@ -52,10 +58,10 @@ namespace Problems
         /// <returns></returns>
         public static string CatIsMissingSomething(string value, int index)
         {
-            return string.Empty;
+            return value.Remove(index, 1);
         }
 
-       
+
 
         /// <summary>
         /// Using the string parameter value, flip the first and last charactors
@@ -65,13 +71,23 @@ namespace Problems
         /// <returns></returns>
         public static string SwappedCat(string value)
         {
-            return string.Empty;
+            if (value.Length < 2)
+            {
+                return value;
+            }
+
+            string complete = value.Substring(value.Length - 1, 1) + value.Substring(1, value.Length - 2) + value.Substring(0, 1);
+            return complete;
+
+
         }
 
-        /// <summary>
-        /// We are passed the string parameter named value. Return a new string which gets the first three letters of value and concats those letters three times. If the string is less than 3 letters, return back the original string
-        /// 
-        /// 
+        //// ******** second part of questions***********
+
+        /// <summary>  
+        /// We are passed the string parameter named value. Return a new string which gets the first three 
+        /// letters of value and concats those letters three times. If the string is less than 3 letters, 
+        /// return back the original string concated 3 times
         /// For Example: value = 'abc' return 'abcabcabc'
         ///              value = 'house' return 'houhouhou'
         /// </summary>
@@ -80,67 +96,112 @@ namespace Problems
 
         public static string FirstThree(string value)
         {
-            return string.Empty;
+
+            if (value.Length < 3)
+            {
+                return value + value + value;
+            }
+
+            string name = value.Substring(0, 3);
+            {
+                return name + name + name;
+            }
+
+
         }
 
         /// <summary>
-        /// We are the string parameter name value. Return a new string which gets the last character from value and adds it to the front and back.
-        /// 
+        /// We are given the string parameter name value. Return a new string which gets the last character 
+        /// from value and adds it to the front and back.
         /// For Example: value = 'cat' return 'tcatt'
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
         public static string BringItBack(string value)
         {
-            return string.Empty;
+            string lastchar = value.Substring(value.Length - 1, 1);
+            return lastchar + value + lastchar;
         }
 
         /// <summary>
-        /// We are given a string parameter name value. Return a new string which takes the first two characters and adds them to the front and back. If the length of value is less than two, than use whatever characters are there
+        /// We are given a string parameter name value. Return a new string which takes the first 
+        /// two characters and adds them to the front and back of value. If the length of value is 
+        /// less than two, than use whatever characters are there
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
 
         public static string BringItBackTwice(string value)
         {
-            return string.Empty;
+
+            if (value.Length < 2)
+            {
+                return value + value + value;
+            }
+
+            string firsttwo = value.Substring(0, 2);
+            return firsttwo + value + firsttwo;
+
         }
 
-        /// <summary>
+        /// <summary>)
         /// If the string parameter value begins with 'cat' return 'true' else return 'false'
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
         public static bool StartWithCat(string value)
         {
-            return false;
+            //dont start with, use substring
+            if (value.Length >= 3 && value.Substring(0, 3) == "cat")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
         }
 
+
         /// <summary>
-        /// We are given two integer parameters, numA and numB. Return true if one is less than zero and the other is greater than 100
+        /// We are given two integer parameters, numA and numB. 
+        /// Return true if one is less than zero and the other is greater than 100
         /// </summary>
         /// <param name="numA"></param>
         /// <param name="numB"></param>
         /// <returns></returns>
         public static bool ZeroToHundered(int numA, int numB)
         {
+            if ((numB <= 0 && numA >= 0) || (numA < 100 && numB > 100))
+            {
+                return true;
+            }
             return false;
         }
 
         /// <summary>
-        /// We are given two integer parameters, numA and numB. Return true if numA or numB is between 10 and 20 inclusive
+        /// We are given two integer parameters, numA and numB. Return true if numA or numB is between 
+        /// 10 and 20 inclusive
         /// </summary>
         /// <param name="numA"></param>
         /// <param name="numB"></param>
         /// <returns></returns>
         public static bool CaughtBetween10And20(int numA, int numB)
         {
+            if ((numB >= 10) && (numB <= 20) || (numA >= 10) && (numA <= 20))
+            {
+                return true;
+            }
             return false;
-
         }
 
         /// <summary>
-        /// We have three cats whose age in months is passed by the parameters catA,catB,and catC. We want to determine if they are still kittens or not. A cat is a kitten if its age is between 13-19 months (inclusive). Return true if any of them are kittens, else return false if all of them aren't.
+        /// We have three cats whose age in months is passed by the parameters catA,catB,and catC. 
+        /// We want to determine if they are still kittens or not. A cat is a kitten if its age is 
+        /// between 13-19 months (inclusive). Return true if any of them are kittens, else return false 
+        /// if all of them aren't.
         /// </summary>
         /// <param name="catA"></param>
         /// <param name="catB"></param>
@@ -148,22 +209,39 @@ namespace Problems
         /// <returns></returns>
         public static bool IsItACatOrKitten(int catA, int catB, int catC)
         {
+
+            if ((catA >= 13) && (catA <= 19) || (catB >= 13) && (catB <= 19) || (catC >= 13) && (catC <= 19))
+            {
+                return true;
+            }
             return false;
+
         }
 
         /// <summary>
-        /// We have two cats whose age in months is passed in by the parameters catA and catB. A cat is a kitten if its age is between 13-19 months(inclusive). Return true if either cat is a kitten but not both of them 
+        /// We have two cats whose age in months is passed in by the parameters catA and catB. 
+        /// A cat is a kitten if its age is between 13-19 months(inclusive). 
+        /// Return true if either cat is a kitten but not both of 
+        /// them 
         /// </summary>
         /// <param name="catA"></param>
         /// <param name="catB"></param>
         /// <returns></returns>
         public static bool IsOneAKitten(int catA, int catB)
         {
-            return false;
+            if ((catA >= 13 && catA <= 19) && (catB >= 13 && catB <= 19))
+            {
+                return false;
+            }
+            return ((catA >= 13 && catA <= 19) || (catB >= 13 && catB <= 19));
+
+
         }
 
         /// <summary>
-        /// We have a string parameter value. If the parameter contains the value 'cat' beginning at index 1, return back the string value with 'cat' removed, else return the original string
+        /// We have a string parameter value. If the parameter contains the value 'cat' 
+        /// beginning at index 1, return back the string value with 'cat' removed, else 
+        /// return the original string
         /// 
         /// For example: value = 'acatbc' return 'abc'
         /// </summary>
@@ -171,7 +249,17 @@ namespace Problems
         /// <returns></returns>
         public static string DeleteCat(string value)
         {
-            return string.Empty;
+            if (value.Length >= 4)
+            {
+                string start = value.Substring(1, 3);  
+                if (start == "cat")  
+                {
+                    return value.Replace("cat", "");  // Remove(1)
+                }
+            }
+                return   value;
+        }
+              
         }
 
         /// <summary>
@@ -250,4 +338,9 @@ namespace Problems
             return false;
         }
     }
-}
+
+
+
+
+    
+
