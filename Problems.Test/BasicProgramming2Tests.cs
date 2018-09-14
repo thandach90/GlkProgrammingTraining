@@ -2458,7 +2458,7 @@ namespace Problems.Test
 
             //assert
 
-            Assert.AreEqual(true, result);
+            Assert.AreEqual(false, result);
         }
 
         [TestMethod]
@@ -2510,6 +2510,657 @@ namespace Problems.Test
             //assert
 
             Assert.AreEqual(false, result);
+        }
+    }
+
+    [TestClass]
+
+    public class CreateLucky7s
+    {
+
+        [TestMethod]
+        public void Test1()
+        {
+
+
+            //arrange
+            int[] value = new int[] {7, 7, 7};
+
+
+            //act
+
+            int[] result = BasicProgramming2.CreateLucky7s();
+
+            //assert
+            CollectionAssert.AreEqual(value,result);
+        }
+    }
+
+    [TestClass]
+    public class SixFirstLast
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            int[] value = new int[]{1,2,6};
+
+
+        //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            int[] value = new int[] { 6,1,2,3 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            int[] value = new int[] { 13,6,1,2,3 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            int[] value = new int[] { 13, 6, 1, 2, 6 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            int[] value = new int[] { 3,2,1 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test6()
+        {
+            //arrange
+            int[] value = new int[] { 3, 6,1 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test7()
+        {
+            //arrange
+            int[] value = new int[] { 3, 6 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test8()
+        {
+            //arrange
+            int[] value = new int[] { 6 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test9()
+        {
+            //arrange
+            int[] value = new int[] { 3 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test10()
+        {
+            //arrange
+            int[] value = new int[] { 5,6 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test11()
+        {
+            //arrange
+            int[] value = new int[] { 5, 5 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test12()
+        {
+            //arrange
+            int[] value = new int[] { 1,2,3,4,6 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test13()
+        {
+            //arrange
+            int[] value = new int[] { 1, 2, 3, 4};
+
+
+            //act
+
+            bool result = BasicProgramming2.SixFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+    }
+
+    [TestClass]
+    public class SameFirstLast
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            int[] value = new int[] { 1, 2, 3 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SameFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            int[] value = new int[] { 1, 2, 3,1 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SameFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            int[] value = new int[] { 1, 2, 1 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SameFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            int[] value = new int[] { 7 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SameFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            int[] value = new int[] {  };
+
+
+            //act
+
+            bool result = BasicProgramming2.SameFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test6()
+        {
+            //arrange
+            int[] value = new int[] {1,2,3,4,5,1 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SameFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test7()
+        {
+            //arrange
+            int[] value = new int[] { 1, 2, 3, 4, 5, 13 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SameFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void Test8()
+        {
+            //arrange
+            int[] value = new int[] { 13, 2, 3, 4, 5, 13 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SameFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Test9()
+        {
+            //arrange
+            int[] value = new int[] { 7,7 };
+
+
+            //act
+
+            bool result = BasicProgramming2.SameFirstLast(value);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+    }
+
+    [TestClass]
+    public class CatEnds
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            int[] catsA = new int[] { 1, 2, 3 };
+            int[] catsB = new int[] { 7, 3 };
+
+
+            //act
+
+            bool result = BasicProgramming2.CatEnds(catsA,catsB);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            int[] catsA = new int[] { 1, 2, 3 };
+            int[] catsB = new int[] { 7, 3,2 };
+
+
+            //act
+
+            bool result = BasicProgramming2.CatEnds(catsA, catsB);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            int[] catsA = new int[] { 1, 2, 3 };
+            int[] catsB = new int[] { 1,3 };
+
+
+            //act
+
+            bool result = BasicProgramming2.CatEnds(catsA, catsB);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            int[] catsA = new int[] { 1, 2, 3 };
+            int[] catsB = new int[] { 1 };
+
+
+            //act
+
+            bool result = BasicProgramming2.CatEnds(catsA, catsB);
+
+            //assert
+
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            int[] catsA = new int[] { 1, 2, 3 };
+            int[] catsB = new int[] { 2 };
+
+
+            //act
+
+            bool result = BasicProgramming2.CatEnds(catsA, catsB);
+
+            //assert
+
+            Assert.AreEqual(false, result);
+        }
+    }
+
+    [TestClass]
+    public class CatSum3
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            int[] catsA = new int[] { 1, 2, 3 };
+           
+
+
+            //act
+
+            int result = BasicProgramming2.CatSum3(catsA);
+
+            //assert
+
+            Assert.AreEqual(6, result);
+        }
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            int[] catsA = new int[] { 5,11,2 };
+
+
+
+            //act
+
+            int result = BasicProgramming2.CatSum3(catsA);
+
+            //assert
+
+            Assert.AreEqual(18, result);
+        }
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            int[] catsA = new int[] { 7,0,0 };
+
+
+
+            //act
+
+            int result = BasicProgramming2.CatSum3(catsA);
+
+            //assert
+
+            Assert.AreEqual(7, result);
+        }
+
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            int[] catsA = new int[] { 1,2,1 };
+
+
+
+            //act
+
+            int result = BasicProgramming2.CatSum3(catsA);
+
+            //assert
+
+            Assert.AreEqual(4, result);
+        }
+
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            int[] catsA = new int[] { 1, 1, 1 };
+
+
+
+            //act
+
+            int result = BasicProgramming2.CatSum3(catsA);
+
+            //assert
+
+            Assert.AreEqual(3, result);
+        }
+        [TestMethod]
+        public void Test6()
+        {
+            //arrange
+            int[] catsA = new int[] { 2,7,2 };
+
+
+
+            //act
+
+            int result = BasicProgramming2.CatSum3(catsA);
+
+            //assert
+
+            Assert.AreEqual(11, result);
+        }
+    }
+
+    [TestClass]
+    public class CatsRotateLeft
+    {
+        [TestMethod]
+        public void Test1()
+        {
+            //arrange
+            int[] input = new int[] { 1, 2, 3 };
+
+            //act
+            int[] result = BasicProgramming2.CatsRotateLeft(input);
+
+            int[] expected = new int[]{2,3,1};
+
+            //assert
+            CollectionAssert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Test2()
+        {
+            //arrange
+            int[] input = new int[] { 5,11,9 };
+
+            //act
+            int[] result = BasicProgramming2.CatsRotateLeft(input);
+
+            int[] expected = new int[] { 11,9,5 };
+
+            //assert
+            CollectionAssert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Test3()
+        {
+            //arrange
+            int[] input = new int[] { 7,0,0 };
+
+            //act
+            int[] result = BasicProgramming2.CatsRotateLeft(input);
+
+            int[] expected = new int[] { 0,0,7 };
+
+            //assert
+            CollectionAssert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Test4()
+        {
+            //arrange
+            int[] input = new int[] { 1,2,1 };
+
+            //act
+            int[] result = BasicProgramming2.CatsRotateLeft(input);
+
+            int[] expected = new int[] { 2,1,1 };
+
+            //assert
+            CollectionAssert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Test5()
+        {
+            //arrange
+            int[] input = new int[] { 0,0,1 };
+
+            //act
+            int[] result = BasicProgramming2.CatsRotateLeft(input);
+
+            int[] expected = new int[] { 0,1,0 };
+
+            //assert
+            CollectionAssert.AreEqual(expected, result);
         }
     }
 
