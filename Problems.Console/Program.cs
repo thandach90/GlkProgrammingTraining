@@ -11,39 +11,88 @@ namespace Problems.Console
 {
     class Program
     {
-
-       
         static void Main(string[] args)
         {
-            string value = "value";
-            string name = value.Substring(0, 5);  // name = value.Substring(1, value.Lenght -2);
-            if (name.Length >= 5)
-            {
-                System.Console.WriteLine(value.Contains("value"));
-            }
+
+            int value = 10 % 3;
+            System.Console.WriteLine(value);
+            System.Console.ReadLine();
+
+            ///int main(int a, b)
+            ///{
+            ///
+            ///}
+            ///int f = a;
+            ///int s = b;
+            ///
+            ///if (a </= b)
+            ///{
+            ///    
+            //We have a string parameter called mix. Return true if the string begins with 'cat', however
+            /// the 'c' in 'cat' can be anything so 'bat','hat' are examples which will also return true
+            /// </summary>
+            /// <param name="mix"></param>
+            /// <returns></returns
+           ///// 
+           //int n = 5, sum = 0;
+           //
+           //for (int i = 1; i <= n; i++)
+           //{
+           //    // sum = sum + i;
+           //    sum += i;
+           //}
+           //
+           //System.Console.WriteLine("Sum of first {0} natural numbers = {1}", n, sum);
+
+
+
+            ///string mix = "cat";
+            ///if (mix == mix.Replace("cat", ""))
+            ///{
+            ///System.Console.WriteLine("true"); //return true;
+            ///}
+            ///System.Console.WriteLine("false");
+
 
             ///when to use Substring vrs Length 
-            ///
-
-            for(int i=0;i<10;i++)
-            {
-                System.Console.WriteLine(name + name + name);
-            }
-                          
-            
-            
-            
+            //for (int i=0;i<10;i++)
+            //{
+            //    System.Console.WriteLine(name + name + name);
+            //}
+            //
+            //string[] names = new string[3];
+            //names[0] = "Theo";
+            //names[1] = "Cueball";
+            //names[2] = "russian";
+            //
+            //
+            //int[] numbers = new int[2];
+            //numbers[0] = 0;
+            //numbers[1] = 1;
+            //
+            ////https://www.dotnetperls.com/array
+            //
+            //int catA; 
+            //int catB;
+            //int catC;
+            //
+            //int[] cats = new int[1000000];
+            //
+            //char[] letters = "test".ToCharArray();
+            //
+            //
+            //char first = letters[0];
 
             //string test = value.Substring()
 
             /// easy way to get 'value'
-            string easy = value.Substring(0, 5);
-            System.Console.WriteLine(easy);
-
-            string name2 = value.Substring(0, value.Length - 4);
-            string name3 = value.Substring(1, value.Length - 1);
-           //// gets value
-            System.Console.WriteLine(name2 + name3);
+            //string easy = value.Substring(0, 5);
+            //System.Console.WriteLine(easy);
+            //
+            //string name2 = value.Substring(0, value.Length - 4);
+            //string name3 = value.Substring(1, value.Length - 1);
+            ////// gets value
+            //System.Console.WriteLine(name2 + name3);
 
             // string str2 = value.Substring(0, 3);
             //System.Console.WriteLine(str2);
