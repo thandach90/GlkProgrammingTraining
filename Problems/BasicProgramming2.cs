@@ -398,7 +398,84 @@ namespace Problems
         {
             return false;
         }
+
+        /// <summary>
+        /// Please create and return a new array containing three 7s
+        /// Don't overthink this one :)
+        /// array = [7,7,7]
+        /// </summary>
+        /// <returns></returns>
+
+        public static int[] CreateLucky7s()
+        {
+            return null;
+        }
+
+        /// <summary>
+        /// We are given a array of integers called cats. Return true if a 6 is located in the first or last index else return false
+        /// 
+        /// for example: [1,2,6] = true
+        /// </summary>
+        /// <param name="cats"></param>
+        /// <returns></returns>
+        public static bool SixFirstLast(int[] cats)
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// We are given a array of integers called cats. Return true if cats array length is greater or equal to 1, also if the first and last elements in the array are equal
+        /// </summary>
+        /// <param name="cats"></param>
+        /// <returns></returns>
+        public static bool SameFirstLast(int[] cats)
+        {
+            return false;
+        }
+
+
+        /// <summary>
+        /// We are given two int arrays named catsA and catsB. If catsA and catsB share the same first element or share the same last element return true, else return false
+        /// </summary>
+        /// <param name="catsA"></param>
+        /// <param name="catsB"></param>
+        /// <returns></returns>
+        public static bool CatEnds(int[] catsA, int[] catsB)
+        {
+
+            return false;
+        }
+
+        /// <summary>
+        /// We are given a int array parameter named cats. Cats will always be a length of 3. Please add up all the integers in cats and return the sum.
+        /// </summary>
+        /// <param name="cats"></param>
+        /// <returns></returns>
+        public static int CatSum3(int[] cats)
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// We are given a integer array called cats. Return cats array where each index goes left 'rotated left'. The array cats will always be length of 3.
+        /// 
+        /// example: [1,2,3] rotated left is [2,3,1]
+        ///          [5,11,9] rotated left is [11,9,5]
+        /// </summary>
+        /// <param name="cats"></param>
+        /// <returns></returns>
+        public static int[] CatsRotateLeft(int[] cats)
+        {
+
+            return cats;
+        }
+
+
     }
+
+
+
+
 }
 
 
