@@ -6,6 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Problems.Console
 {
@@ -14,10 +15,227 @@ namespace Problems.Console
         static void Main(string[] args)
         {
 
-            int value = 10 % 3;
-            System.Console.WriteLine(value);
-            System.Console.ReadLine();
+            int[] cats = { 0, 1, 2, 3 };
 
+            
+
+
+            // cats[0] = cats[cats.Length - 1];
+            // cats[1] = cats[cats.Length - 2];
+
+            // Move cats[1] to cats[0], cats[2] to cats[1]....... 
+
+           // int[] cats = { 0, 1, 2, 3 };
+           //
+           // int i, dogs;
+           // dogs = cats[0];
+           //
+           // for (i = 0; i < cats.Length - 1; i++)  /// Shifting the array --> i -> first postion -> full length till last char -> the Count;
+           // cats[i] = cats[i + 1];  // cats + dog = cats[dogs + 1]  --> able to flip 
+           // cats[i] = dogs; // dogs = 0; .....  
+           //
+           // System.Console.WriteLine(dogs);   ///Gives output of 0;
+
+
+           //return cats;
+           //
+           //int[] cats = { 1, 2, 3, 4 };
+           //int n = cats.Length;
+           //
+           //int i;
+           //for (i = 1; i < n; ++i)
+           //    cats[i - 1] = cats[i];
+           //
+           //System.Console.WriteLine("true ");
+
+
+           //int[] cats = { 0, 1, 2, 3, 4 };
+           //
+           //int add = cats[0];
+           //int length = cats.Length - 1;
+           //
+           //int sum = add + length;
+           //
+           //System.Console.WriteLine(add + length);
+           //
+           // //int sum = add + length;
+           // System.Console.WriteLine(sum);
+           //
+           //if(add == length)
+           //{
+           //    System.Console.WriteLine(sum);
+           //}
+           //
+           // int[] cats2 = new int[3] { 2, 5, 8 };
+           // int sum2 = 0;
+           //
+           // for (int i = 0; i < cats2.Length; i++)
+           // {
+           //     sum2 += cats2[i];
+           // }
+           // System.Console.WriteLine("Sum of all elements stored in the array is : " + sum);
+            //System.Console.WriteLine("Sum of all elements stored in the array is : " + arr.Sum());
+            //// RemoteControl control = new RemoteControl("Black");
+            //// RemoteControl control1 = new RemoteControl("Green");
+            ////
+            //// Button power = new Button("Power On");
+            //// Button poweroff = new Button("Power Off");
+            ////
+            //// power.Push();   /// what about giving a prompted option to selcet 'A' Enter then print to screen "Power On"; 
+            //// poweroff.Push(); //The same for power off?
+            ////
+            //// System.Console.Read();
+
+            //System.Console.WriteLine(control.GetColor());
+            //System.Console.WriteLine(control1.GetColor());
+            //control1.SetColor("Purple");
+            //System.Console.WriteLine(control.GetColor());
+            //System.Console.WriteLine(control1.GetColor());
+            //System.Console.Read();
+
+            //string name = "cats";
+            //int a = name[name.Length - 1];
+
+            //System.Console.WriteLine(a);
+
+            //char character = (char)inputA;
+            //char character2 = (char)inputB;
+            //string text = character.ToString();
+            //
+            //string asciichar = (Convert.ToChar(65)).ToString();
+            //System.Console.WriteLine(asciichar);  // returns 'A'
+
+            // Modulo operator notes 
+
+            //int value = 5 % 3;  // output is '2'
+            //System.Console.WriteLine(value);
+            //int value2 =101 % 3;  // output is '2'
+            //System.Console.WriteLine(value2);
+            //int value3 = 99 % 3;  // output is '0'
+            //System.Console.WriteLine(value3);
+            //int value4 = 115 % 5;  // output is 'o'
+            //System.Console.WriteLine(value4);
+
+            // Modulo operator
+
+            //double firstNumber = 14.40, secondNumber = 4.60, result;
+            //int num1 = 26, num2 = 4, rem;
+            //
+            //// Addition operator
+            //result = firstNumber + secondNumber;
+            //System.Console.WriteLine("{0} + {1} = {2}", firstNumber, secondNumber, result);
+            //
+            //// Subtraction operator
+            //result = firstNumber - secondNumber;
+            //System.Console.WriteLine("{0} - {1} = {2}", firstNumber, secondNumber, result);
+            //
+            //// Multiplication operator
+            //result = firstNumber * secondNumber;
+            //System.Console.WriteLine("{0} * {1} = {2}", firstNumber, secondNumber, result);
+            //
+            //// Division operator
+            //result = firstNumber / secondNumber;
+            //System.Console.WriteLine("{0} / {1} = {2}", firstNumber, secondNumber, result);
+            //
+            //// Modulo operator
+            //rem = num1 % num2;
+            //System.Console.WriteLine("{0} % {1} = {2}", num1, num2, rem);
+
+
+
+            ////Messing around 
+
+            //int inputA = 0;
+            //int inputB = 0;
+            //
+            //string a = inputA.ToString();
+            //char[] charArray = a.ToCharArray();
+            //
+            //string b = inputB.ToString();
+            //char[] chararray2 = b.ToCharArray();
+
+            /////  Testing sum method 
+
+
+            ///// int[] arr1 = { 3, 5, 2, 5, 2 };
+            ///// int[] arr2 = { 2, 3, 5, 5, 2 };
+            /////
+            ///// if (arr1 == arr2)
+            /////     System.Console.WriteLine("return true");
+            ///// else
+            /////      System.Console.WriteLine("return false");
+            //int[] catsA;
+            //int[] catsB;
+
+
+
+
+
+            //}
+            // string[] planets = { "Mercury", "Venus", "Mars",
+            //"Earth", "Jupiter",  "Saturn", "Uranus", "Neptune", "Pluto" };
+            //
+            //foreach (string planet in planets)
+            //{
+            //    System.Console.WriteLine(planet);
+            //}
+            ////  output is 25'
+            //int[] numbers = { 4, 3, 8, 0, 5 };
+            //
+            //Array.Sort(numbers);
+            //
+            //foreach (int i in numbers)
+            //    System.Console.WriteLine(i);
+
+
+
+            // string name = "cats";
+            //string lastchar = name.Substring(name.Length -1);  // gets Last char
+            // string complete = name.Substring(0, 4);  /// gives 'cats'
+            //string one = name.Substring(0, 1); // gets first Char
+            //System.Console.WriteLine(one);
+            //string length = name.Substring(0, name.Length - 0);  // gets cats' *****
+            // System.Console.WriteLine(length);
+            //string[] array = { "cats" };
+
+            //****TESTING THE OUTPUT OF '%';  you will always get '0' if both inter go into eachother equally!****//
+            //never have a remainder!
+
+
+
+            ////******* Tying to understand LOOPS*********////
+
+            // The dog string is at index 1.
+            //int catIndex = Array.IndexOf(array, "cat");
+            //return catIndex;
+            //System.Console.WriteLine(catIndex);
+
+            //// Create string array with no elements.
+            //var empty1 = new string[] { };
+            //System.Console.WriteLine(empty1.Length == 0);
+            //
+            //// This syntax has the same result.
+            //var empty2 = new string[0];
+            //System.Console.WriteLine(empty2.Length == 0);
+
+            ////****** UNDERSTANDING LOOPS CONT****////
+
+            /////string[] array = { "red", "blue", "green" };
+            /////// Loop with for each and write colors with string interpolation.
+            /////foreach (string color in array)
+            /////{
+            /////    System.Console.WriteLine($"Color = {color}");
+            /////}
+
+
+
+            //////***** TESTING 'e' Char question && start with******//////
+
+            //string word = "vic";
+            //sif (word.Substring(1, 3) == "c")
+            //s
+            //s   System.Console.WriteLine(word);
+            //s
             ///int main(int a, b)
             ///{
             ///
@@ -33,25 +251,20 @@ namespace Problems.Console
             /// </summary>
             /// <param name="mix"></param>
             /// <returns></returns
-           ///// 
-           //int n = 5, sum = 0;
-           //
-           //for (int i = 1; i <= n; i++)
-           //{
-           //    // sum = sum + i;
-           //    sum += i;
-           //}
-           //
-           //System.Console.WriteLine("Sum of first {0} natural numbers = {1}", n, sum);
+            ///// 
+            //int n = 5, sum = 0;
+            //
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    // sum = sum + i;
+            //    sum += i;
+            //}
+            //
+            //System.Console.WriteLine("Sum of first {0} natural numbers = {1}", n, sum);
 
 
 
-            ///string mix = "cat";
-            ///if (mix == mix.Replace("cat", ""))
-            ///{
-            ///System.Console.WriteLine("true"); //return true;
-            ///}
-            ///System.Console.WriteLine("false");
+
 
 
             ///when to use Substring vrs Length 
@@ -171,6 +384,6 @@ namespace Problems.Console
 
         }
 
-       
+
     }
 }
