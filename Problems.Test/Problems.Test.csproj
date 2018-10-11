@@ -51,6 +51,7 @@
     <Compile Include="BasicProgrammingTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BasicProgramming2Tests.cs" />
+    <Compile Include="BasicProgramming3Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

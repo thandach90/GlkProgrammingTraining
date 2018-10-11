@@ -33,5 +33,38 @@ namespace Problems
         {
             return string.Empty;
         }
+
+        /// <summary>
+        /// We are given a string str. Return true if the first 'c' in str is followed by another 'c'.
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+
+        public static bool DoubleC(string str)
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// We are given a string str, create a new string consisting of every other character beginning with the first and return it.
+        /// 
+        /// example: str = hello  returned = hlo       --- it returns every other char
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static string MissingMiddle(string str)
+        {
+            return string.Empty;
+        }
+
+        /// <summary>
+        /// We are given a string str, create a new string that adds itself each time over and over again that takes a predeccessor version of itself starting at the next specific index. For example if str is equal to 'cat', we would return 'ccacat'. 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static string StringPlosion(string str)
+        {
+            return string.Empty;
+        }
     }
 }
