@@ -84,9 +84,6 @@ namespace Problems
 
         }
 
-
-
-
     /// <summary>
         /// Given two bowls of food represented by variables, food and food2, return true 
         /// if one bowl has less than 0 food (-1,-2) and the other bowl has more than 100

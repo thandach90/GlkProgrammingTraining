@@ -9,6 +9,8 @@ namespace Problems
 {
     public static class BasicProgramming2
     {
+        // public static int positive { get; private set; }
+
         /// <summary>
         /// Given a string parameter 'value', return the string with 'cat' added to the front.
         /// </summary>
@@ -62,7 +64,6 @@ namespace Problems
         }
 
 
-
         /// <summary>
         /// Using the string parameter value, flip the first and last charactors
         /// example: code = eodc
@@ -103,9 +104,9 @@ namespace Problems
             }
 
             string name = value.Substring(0, 3);
-            {
-                return name + name + name;
-            }
+
+            return name + name + name;
+
 
 
         }
@@ -249,12 +250,13 @@ namespace Problems
         /// <returns></returns>
         public static string DeleteCat(string value)
         {
+
             if (value.Length >= 4)
             {
                 string start = value.Substring(1, 3);
                 if (start == "cat")
                 {
-                    return value.Replace("cat", "");  // Remove(1) ? How to use the removel ? 
+                    return value.Replace("cat", "");
                 }
             }
             return value;
@@ -268,16 +270,22 @@ namespace Problems
         /// </summary>
         /// <param name="mix"></param>
         /// <returns></returns>
-        public static bool CatMix(string mix)  //// need to go over 
+        public static bool CatMix(string mix)
         {
+            if (mix.Length < 3)
+            {
+                return false;
+            }
 
-            if ((mix.Length < 3 && (mix.Substring(1, 3) == ("at")))) 
+            if (mix.Substring(1, 2) == "at")
+
             {
                 return true;
             }
-
             return false;
         }
+
+
 
         /// <summary>
         /// We have three cats whose weight is stored in catA,catB,and catC. 
@@ -301,14 +309,15 @@ namespace Problems
             {
                 weight = catB;
             }
-               
+
             if (catC > weight)
             {
                 weight = catC;
             }
-                
+
             return weight;
         }
+
 
         /// <summary>
         /// We are given two integer parameters catA and catB which represents a cats weight. 
@@ -320,19 +329,19 @@ namespace Problems
         /// <returns></returns>
         public static int GetClosetCatToTen(int catA, int catB)
         {
-            int weight =  Math.Abs(10 - catA);  //// Math.Abs -  absolute value of a int.
-            int weight2 = Math.Abs(10 - catB);   
-                                                ///// Just like BasicProgramming1 problem
+            int weight = Math.Abs(10 - catA);  //// Math.Abs -  absolute value of a int.
+            int weight2 = Math.Abs(10 - catB); // if 10 then will stop at 9 ==> Example: 1, 2, 3, 4, 5, 6, 7, 8, 9; if 4 ==> 1, 2, 3;
+
             if (weight < weight2)
             {
                 return catA;
             }
-                
+
             else if (weight2 < weight)
             {
                 return catB;
             }
-                
+
             return 0;
         }
 
@@ -345,26 +354,31 @@ namespace Problems
         /// <returns></returns>
         public static bool GetStringE(string str)  //// Loops 
         {
-            {   ///https://www.programiz.com/csharp-programming/for-loop
+            ///https://www.programiz.com/csharp-programming/for-loop
 
-                ///for (initialization; condition; iterator)
+            int count = 0;
 
-                // body of for loop
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == 'e')
+                {
+                    count++;
+                }
 
-                ///initialization statement is int i = 1
-                ///condition statement is i </= 5
-                ///iterator statement is i++
-                return false;
             }
-           
-        }
-               
-        
 
+
+            if (count >= 1 && count <= 3)
+            {
+                return true;
+            }
+            return false;
+        }
         /// <summary>
-        /// This will be a research question. Please research the modulus operator '%' 
+        /// This will be a research question. modulus operator '%' 
         /// and figure out its functionality. You will need it to solve the following problem. 
         /// A important skill in programming is looking up commands and figuring out how to use them
+
         /// We are given a integer parameter input, return true if input is a multiple of 3 or 5.
         /// example: 3 = true, 10 = true, 8 = false
         /// </summary>
@@ -373,29 +387,35 @@ namespace Problems
 
         public static bool ThreeOrFive(int input)
         {
-            // % checks for * of a inter;
-            int n = 0;
-            while(n < 0)
-            {
-                return true;
-            }
-            if(n % 3 == 0 || n % 5 == 0)
+            //  using Modulo operator 
+            /// multiple of 3 or 5 gives it away '%'
+            /// example --- 5 % 3 = 2 
+            /////////////////////////// or --> to use % ?////////////
+            if (input % 3 == 0 || input % 5 == 0)
             {
                 return true;
             }
             return false;
         }
-  
-    /// <summary>
-    /// We are given two integer parameters inputA and inputB which will always be positive. 
-    /// Return true if they both have the same last digit. 
-    /// For example: inputA = 7 and inputB = 17 will return true
-    /// </summary>
-    /// <param name="inputA"></param>
-    /// <param name="inputB"></param>
-    /// <returns></returns>
-    public static bool GetTheLastDigit(int inputA, int inputB)
+
+        /// <summary>
+        /// We are given two integer parameters inputA and inputB which will always be positive. 
+        /// Return true if they both have the same last digit. 
+        /// For example: inputA = 7 and inputB = 17 will return true
+        /// </summary>
+        /// <param name="inputA"></param>
+        /// <param name="inputB"></param>
+        /// <returns></returns>
+        /// LastDigit
+        public static bool GetTheLastDigit(int inputA, int inputB)
         {
+            //(inputA then inputB) % 10 will give you the last digit
+
+            if (inputA % 10 == inputB % 10)
+            {
+                return true;
+            }
+
             return false;
         }
 
@@ -408,19 +428,30 @@ namespace Problems
 
         public static int[] CreateLucky7s()
         {
-            return null;
+            int[] array = { 7, 7, 7 };
+
+            return array;
         }
 
         /// <summary>
-        /// We are given a array of integers called cats. Return true if a 6 is located in the first or last index else return false
-        /// 
+        /// We are given a array of integers called cats. Return true if a 6 is located in the first or last index  return false
         /// for example: [1,2,6] = true
         /// </summary>
         /// <param name="cats"></param>
         /// <returns></returns>
         public static bool SixFirstLast(int[] cats)
         {
+            int indexfirst = cats[0];                        //Gives First index 
+            int indexlast = cats[cats.Length - 1];          // same as string indexlast = cats.Substring()
+
+            if (indexfirst == 6 || indexlast == 6)
+            {
+                return true;
+            }
+
+
             return false;
+
         }
 
         /// <summary>
@@ -430,6 +461,20 @@ namespace Problems
         /// <returns></returns>
         public static bool SameFirstLast(int[] cats)
         {
+
+            if (cats.Length < 1)   /// Have to state Length --> if cats ;
+            {
+                return false;
+            }
+
+            int first = cats[0]; // Cats starting at [0]  
+            int last = cats[cats.Length - 1]; // getts last char 
+
+            if (first == last)   /// also if the "first" and "last" elements in the array are equal 'are equal'
+            {
+                return true;
+            }
+
             return false;
         }
 
@@ -443,7 +488,18 @@ namespace Problems
         public static bool CatEnds(int[] catsA, int[] catsB)
         {
 
+            int value = catsA[0];
+            int value2 = catsB[0];
+            int stor = catsA[catsA.Length - 1];
+            int stor2 = catsB[catsB.Length - 1];
+
+
+            if (value == value2 || stor == stor2)
+            {
+                return true;
+            }
             return false;
+
         }
 
         /// <summary>
@@ -453,7 +509,13 @@ namespace Problems
         /// <returns></returns>
         public static int CatSum3(int[] cats)
         {
-            return 0;
+            int sum = 0;
+
+            for (int i = 0; i < cats.Length; i++)
+            {
+                sum += cats[i];
+            }
+            return sum;
         }
 
         /// <summary>
@@ -467,16 +529,24 @@ namespace Problems
         public static int[] CatsRotateLeft(int[] cats)
         {
 
-            return cats;
+            int i, dogs;
+            dogs = cats[0];
+            for (i = 0; i < cats.Length - 1; i++)
+                cats[i] = cats[i + 1];
+            cats[i] = dogs;
+            {
+                return cats;
+            }
+
+
         }
 
-
     }
-
-
-
-
 }
+
+    
+
+
 
 
 
